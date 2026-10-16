@@ -584,7 +584,7 @@
 
   <script>
     const API = 'https://simulador-btc-api.educaredmovil.workers.dev';
-    const PUBLIC_URL = 'https://juanjosederecho.github.io/simulador-bitcoin/';
+    const PUBLIC_URL = 'https://juanjosederecho.github.io/simulador-bitcoinprueba2/';
     const $ = id => document.getElementById(id);
 
     // Normalización del nombre: sin mayúsculas, sin tildes ni espacios extra
@@ -643,7 +643,7 @@
 
     // Modal QR
     $('qrBtn').onclick = () => {
-      const targetUrl = location.href.startsWith('http') ? location.href.split('#')[0] : PUBLIC_URL;
+      const targetUrl = PUBLIC_URL;
       $('qrImg').src = 'https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=' + encodeURIComponent(targetUrl);
       $('qrUrlText').textContent = targetUrl;
       $('qrModal').style.display = 'flex';
